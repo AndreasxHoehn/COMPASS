@@ -478,5 +478,5 @@ The tool returns a JSON object with:
 
 ---
 
-*This documentation last updated for version 0.40*  
+*This documentation last updated for version 0.41*  
 *Tool under active development - Parameters and features may change*
