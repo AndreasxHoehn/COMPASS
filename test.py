@@ -12,8 +12,9 @@ from pathlib import Path
 # 1️  Build the payload (mirrors the Go structs)
 # ----------------------------------------------------------------------
 payload = {
-    "constraints": "data/BlockLand/artifical_plus_ni_cencus.csv",
-    "microdata":   "data/BlockLand/artifical_plus_ni_hh_survay.csv",
+    "constraints": "data/BlockLand/artifical_cencus.csv",
+    "microdata":   "data/BlockLand/artifical_survay.csv",
+    "groups"      : "data/BlockLand/artificial_groups.csv",
     "output":      "results/artificial_synthetic_population.csv",
     "validate":    "results/artificial_synthPopSurvey.csv",
     "initialTemp":      1000.0,
