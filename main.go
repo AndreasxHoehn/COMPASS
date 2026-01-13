@@ -360,7 +360,15 @@ func runMicrosim(config Config) {
 func main() {
 	// ----- flag handling -------------------------------------------------
 	filePath := flag.String("f", "", "path to a JSON config file")
+	guiFlag := flag.Bool("g", false, "open the GUI (placeholder)")
 	flag.Parse()
+
+	// ----- GUI flag -------------------------------------------------------
+	if *guiFlag {
+		fmt.Fprintln(os.Stderr, " opening GUI … (placeholder)")
+		emitResponse("gui", "GUI would be launched here", rMode())
+		return
+	}
 
 	// ----- Determine input source (file vs stdin) ------------------------
 	var src io.Reader

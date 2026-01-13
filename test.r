@@ -8,9 +8,9 @@ library(jsonlite)
 
 # 1️  Build a nested list that mirrors the Go structs
 payload <- list(
-  constraints = "data/BlockLand/artifical_cencus.csv",
-  microdata   = "data/BlockLand/artifical_survay.csv",
-  groups      = "data/BlockLand/artificial_groups.csv",
+  constraints = "data/BlockWorld/artifical_cencus.csv",
+  microdata   = "data/BlockWorld/artifical_survay.csv",
+  groups      = "data/BlockWorld/artificial_groups.csv",
   output      = "results/artificial_synthetic_population.csv",
   validate    = "results/artificial_synthPopSurvey.csv",
   initialTemp      = 1000.0,
@@ -32,7 +32,7 @@ json_in <- toJSON(payload, auto_unbox = TRUE, pretty = FALSE)
 
 # 3️  Call the Go binary, feeding the JSON via stdin
 out_json <- system2(
-  "./compass",          # path to the compiled binary
+  "./COMPASS",          # path to the compiled binary
   input = json_in,
   stdout = TRUE,          # capture stdout (the result JSON)
   stderr = FALSE          # capture stderr 
